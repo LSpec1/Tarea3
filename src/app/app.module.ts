@@ -6,11 +6,15 @@ import { AppComponent } from './app.component';
 import { NavbarComponent } from './components/navbar/navbar.component';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { HomeScreenComponent } from './screens/home-screen/home-screen.component';
+import { ContactScreenComponent } from './screens/contact-screen/contact-screen.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    NavbarComponent
+    NavbarComponent,
+    HomeScreenComponent,
+    ContactScreenComponent
   ],
   imports: [
     BrowserModule,
