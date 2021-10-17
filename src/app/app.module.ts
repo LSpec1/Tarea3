@@ -11,6 +11,9 @@ import { ContactScreenComponent } from './screens/contact-screen/contact-screen.
 import { NewsScreenComponent } from './screens/news-screen/news-screen.component';
 
 import { MatTabsModule } from '@angular/material/tabs';
+import { ReactiveFormsModule } from '@angular/forms';
+
+
 
 @NgModule({
   declarations: [
@@ -18,14 +21,16 @@ import { MatTabsModule } from '@angular/material/tabs';
     NavbarComponent,
     HomeScreenComponent,
     ContactScreenComponent,
-    NewsScreenComponent
+    NewsScreenComponent,
+
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     NgbModule,
     BrowserAnimationsModule,
-    MatTabsModule
+    MatTabsModule,
+    ReactiveFormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
