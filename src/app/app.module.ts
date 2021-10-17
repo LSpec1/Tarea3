@@ -6,17 +6,26 @@ import { AppComponent } from './app.component';
 import { NavbarComponent } from './components/navbar/navbar.component';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { HomeScreenComponent } from './screens/home-screen/home-screen.component';
+import { ContactScreenComponent } from './screens/contact-screen/contact-screen.component';
+import { NewsScreenComponent } from './screens/news-screen/news-screen.component';
+
+import { MatTabsModule } from '@angular/material/tabs';
 
 @NgModule({
   declarations: [
     AppComponent,
-    NavbarComponent
+    NavbarComponent,
+    HomeScreenComponent,
+    ContactScreenComponent,
+    NewsScreenComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     NgbModule,
-    BrowserAnimationsModule
+    BrowserAnimationsModule,
+    MatTabsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
