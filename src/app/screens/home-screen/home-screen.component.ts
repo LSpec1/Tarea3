@@ -8,11 +8,12 @@ import { Noticia } from 'src/app/components/models/noticia.model';
 })
 export class HomeScreenComponent implements OnInit {
 
-  public noticias: Noticia[];
+  public noticias_destacadas: Noticia[];
+  public noticias_otro: Noticia[];
 
   constructor() { 
     let botonNoticia = 'Leer Más';
-    this.noticias = [
+    this.noticias_destacadas = [
       {
         id:1,
         url:'https://conocedores.com/wp-content/uploads/2019/10/finlandia-aurora-boreal-15102019in1.jpg',
@@ -33,30 +34,32 @@ export class HomeScreenComponent implements OnInit {
         titulo:'Ciclismo - El regreso de Chris Froome',
         cuerpo:'Aliquam tincidunt viverra lacinia. Nullam eu ante a mauris varius mattis ornare at tellus. Nulla sapien urna, pulvinar vel sem vel, vehicula porta tellus. Curabitur ac fermentum ipsum, id cursus urna. Phasellus fringilla suscipit tincidunt. Suspendisse et tortor ut tellus ornare congue ac a risus.',
         boton: botonNoticia
-      },
+      }];
+    
+      this.noticias_otro = [
       {
-        id:4,
+        id:1,
         url:'https://i.pinimg.com/564x/f9/bc/94/f9bc941d08341b9c38b603bba4f4b2bf.jpg',
         titulo:'Noticia',
         cuerpo:'Aliquam tincidunt viverra lacinia. Nullam eu ante a mauris varius mattis ornare at tellus.',
         boton: botonNoticia
       },
       {
-        id:5,
+        id:2,
         url:'https://www.xtrafondos.com/wallpapers/resized/montanas-nevadas-con-bosque-3302.jpg?s=large',
         titulo:'Noticia',
         cuerpo:'Aliquam tincidunt viverra lacinia. Nullam eu ante a mauris varius mattis ornare at tellus.',
         boton: botonNoticia
       },
       {
-        id:6,
+        id:3,
         url:'https://p4.wallpaperbetter.com/wallpaper/757/955/726/sky-meets-the-ocean-at-sunset-orange-sunset-sky-wallpaper-preview.jpg',
         titulo:'Noticia',
         cuerpo:'Aliquam tincidunt viverra lacinia. Nullam eu ante a mauris varius mattis ornare at tellus.',
         boton: botonNoticia
       },
       {
-        id:7,
+        id:4,
         url:'https://imagenes.milenio.com/oyzDEQJ3tSPA84NzpPxr_chUx00=/958x596/https://www.milenio.com/uploads/media/2019/09/18/arce-el-arbol-de-las_11_0_478_297.jpg',
         titulo:'Noticia',
         cuerpo:'Aliquam tincidunt viverra lacinia. Nullam eu ante a mauris varius mattis ornare at tellus.',

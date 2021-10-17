@@ -2,11 +2,11 @@ import { Component, OnInit, Input } from '@angular/core';
 import { Noticia } from 'src/app/components/models/noticia.model';
 
 @Component({
-  selector: 'app-carta-noticias',
+  selector: 'app-carta-noticias-destacadas',
   templateUrl: './carta-noticias.component.html',
   styleUrls: ['./carta-noticias.component.scss']
 })
-export class CartaNoticiasComponent implements OnInit {
+export class CartaNoticiasDestacadasComponent implements OnInit {
 
   gris:string = "gray";
   blanco:string = "white";

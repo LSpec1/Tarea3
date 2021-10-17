@@ -1,20 +1,20 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { CartaNoticiasComponent } from './carta-noticias.component';
+import { CartaNoticiasDestacadasComponent } from './carta-noticias.component';
 
 describe('CartaNoticiasComponent', () => {
-  let component: CartaNoticiasComponent;
-  let fixture: ComponentFixture<CartaNoticiasComponent>;
+  let component: CartaNoticiasDestacadasComponent;
+  let fixture: ComponentFixture<CartaNoticiasDestacadasComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ CartaNoticiasComponent ]
+      declarations: [ CartaNoticiasDestacadasComponent ]
     })
     .compileComponents();
   });
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(CartaNoticiasComponent);
+    fixture = TestBed.createComponent(CartaNoticiasDestacadasComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

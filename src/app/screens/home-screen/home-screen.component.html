@@ -1,7 +1,15 @@
 <div class="container">
     <div class="row mt-5 mb-5">
-        <div class="col mb-5" *ngFor="let noticia of noticias">
-            <app-carta-noticias [news] = noticia></app-carta-noticias>
+        <div class="col mb-5" *ngFor="let noticia of noticias_destacadas">
+            <app-carta-noticias-destacadas [news] = noticia></app-carta-noticias-destacadas>
+        </div>
+    </div>
+</div>
+
+<div class="container">
+    <div class="row mt-5 mb-5">
+        <div class="col mb-5" *ngFor="let noticia of noticias_otro">
+            <app-carta-noticias-otro [news] = noticia></app-carta-noticias-otro>
         </div>
     </div>
 </div>

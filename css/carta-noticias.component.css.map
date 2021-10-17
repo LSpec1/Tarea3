@@ -1,0 +1,9 @@
+{
+    "version": 3,
+    "mappings": "AAAA,AAAA,YAAY,CAAC;EACT,gBAAgB,EAAE,OAAc;CACnC;;AAED,AAAA,cAAc,CAAC;EACX,KAAK,EAAE,OAAc;CACxB",
+    "sources": [
+        "../src/app/components/carta-noticias/carta-noticias.component.scss"
+    ],
+    "names": [],
+    "file": "carta-noticias.component.css"
+}

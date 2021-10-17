@@ -1,0 +1,27 @@
+<!--noticias en grande-->
+<div class="card bg-light border-light" style="max-width: min-content;">
+  <img width="345" height="200" src="{{news.url}}" alt="">
+  <div class="card-body">
+    <div *ngIf="news.id == 1">
+      <h2 class="card-tittle text-{{verde}}">{{news.titulo}}</h2>
+      <p>{{news.cuerpo}}</p>
+      <div class="text-center mt-4">
+        <a href="#" class="btn text-{{blanco}} bg-{{verde}}">{{news.boton}}</a>
+      </div>
+    </div>
+    <div *ngIf="news.id == 2">
+      <h2 class="card-tittle text-{{azul}}">{{news.titulo}}</h2>
+      <p>{{news.cuerpo}}</p>
+      <div class="text-center mt-4">
+        <a href="#" class="btn text-{{blanco}} bg-{{azul}}">{{news.boton}}</a>
+      </div>
+    </div>
+    <div *ngIf="news.id == 3">
+      <h2 class="card-tittle" style="color:gray">{{news.titulo}}</h2>
+      <p>{{news.cuerpo}}</p>
+      <div class="text-center mt-4">
+        <a href="#" class="btn text-{{blanco}} bg-{{rojo}}">{{news.boton}}</a>
+      </div>
+    </div>
+  </div>
+</div>

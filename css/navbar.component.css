@@ -1,0 +1,30 @@
+.nav-tabs {
+  background-color: #303136;
+  padding: 0.01em 16px;
+  padding-bottom: 1px;
+}
+
+.tab-content {
+  background-color: #303136;
+  color: white;
+}
+
+.nav-tabs > li > a {
+  margin: 10px;
+  border: 1px white;
+  color: white;
+}
+
+.nav-tabs > li > a:hover {
+  background-color: #4c4d55 !important;
+  border: 1px white;
+  border-radius: 8px;
+}
+
+.active {
+  color: white !important;
+  background-color: #4c4d55 !important;
+  border: 1px solid !important;
+  border-radius: 8px !important;
+}
+/*# sourceMappingURL=navbar.component.css.map */
