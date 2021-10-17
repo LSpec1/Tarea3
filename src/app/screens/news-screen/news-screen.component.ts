@@ -1,8 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-<<<<<<< HEAD
-=======
 import { Noticia } from 'src/app/components/models/noticia.model';
->>>>>>> 9eaddb3e1e7c729125e0e5c4eef0d3cbadfb6527
 
 @Component({
   selector: 'app-news-screen',
@@ -11,9 +8,6 @@ import { Noticia } from 'src/app/components/models/noticia.model';
 })
 export class NewsScreenComponent implements OnInit {
 
-<<<<<<< HEAD
-  constructor() { }
-=======
   public noticias: Noticia[];
 
   constructor() {
@@ -70,7 +64,6 @@ export class NewsScreenComponent implements OnInit {
       }
     ];
   }
->>>>>>> 9eaddb3e1e7c729125e0e5c4eef0d3cbadfb6527
 
   ngOnInit(): void {
   }
