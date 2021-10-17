@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { ActivatedRoute } from '@angular/router';
 
 @Component({
   selector: 'app-navbar',
@@ -7,9 +8,17 @@ import { Component, OnInit } from '@angular/core';
 })
 export class NavbarComponent implements OnInit {
 
-  constructor() { }
+
+  links = [
+    { title: 'Inicio', fragment: 'home'},
+    { title: 'Noticias', fragment: 'news'},
+    { title: 'Servicio Al Cliente', fragment: 'contact'}
+  ]
+  constructor(public route: ActivatedRoute) { }
 
   ngOnInit(): void {
+
+
   }
 
 }
