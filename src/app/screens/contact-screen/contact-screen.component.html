@@ -1,1 +1,75 @@
-<p>contact-screen works!</p>
+<div *ngIf="!estado">
+<form [formGroup]="formulario" class="d-flex flex-wrap justify-content-center" (ngSubmit)="validacion()" novalidate>
+  <ul>
+    <li>
+      <label class="form-label">Nombre Completo*</label>
+      <input type="text" class="form-control" formControlName="nombre" placeholder="Su nombre completo"
+      [ngClass]="{
+        'is-invalid' : formulario.controls['nombre'].invalid && (formulario.controls['nombre'].dirty || formulario.controls['nombre'].touched),
+        'is-valid' : formulario.controls['nombre'].valid && (formulario.controls['nombre'].dirty || formulario.controls['nombre'].touched)
+      }">
+      <div class='alert alert-danger mt-3' *ngIf="formulario.controls['nombre'].invalid && (formulario.controls['nombre'].dirty || formulario.controls['nombre'].touched)">
+        <div *ngIf="formulario.controls['nombre'].hasError('pattern')">Su nombre no debe contener numeros</div>
+        <div *ngIf="formulario.controls['nombre'].hasError('required')">Es obligatorio ingresar su nombre</div>
+      </div>
+    </li>
+
+    <li>
+      <label class="form-label">Telefono*</label>
+      <input type="number" class="form-control" formControlName="telefono" placeholder="912345678"
+      [ngClass]="{
+        'is-invalid' : formulario.controls['telefono'].invalid && (formulario.controls['telefono'].dirty || formulario.controls['telefono'].touched),
+        'is-valid' : formulario.controls['telefono'].valid && (formulario.controls['telefono'].dirty || formulario.controls['telefono'].touched)
+      }">
+      <div class='alert alert-danger mt-3' *ngIf="formulario.controls['telefono'].invalid && (formulario.controls['telefono'].dirty || formulario.controls['telefono'].touched)">
+        <div *ngIf="formulario.controls['telefono'].hasError('pattern')">Debe anteponer un 9 antes de los 8 digitos de su telefono</div>
+        <div *ngIf="formulario.controls['telefono'].hasError('required')">Es obligatorio ingresar su telefono</div>
+      </div>
+    </li>
+
+    <li>
+      <label class="form-label">Correo*</label>
+      <input type="text" class="form-control" formControlName="correo" placeholder="Su correo"
+      [ngClass]="{
+        'is-invalid' : formulario.controls['correo'].invalid && (formulario.controls['correo'].dirty || formulario.controls['correo'].touched),
+        'is-valid' : formulario.controls['correo'].valid && (formulario.controls['correo'].dirty || formulario.controls['correo'].touched)
+      }">
+      <div class='alert alert-danger mt-3' *ngIf="formulario.controls['correo'].invalid && (formulario.controls['correo'].dirty || formulario.controls['correo'].touched)">
+        <div *ngIf="formulario.controls['correo'].hasError('email')">Debe ingresar un correo valido.</div>
+        <div *ngIf="formulario.controls['correo'].hasError('required')">Es obligatorio ingresar su correo</div>
+      </div>
+    </li>
+
+    <li>
+      <label class="form-label">Dirigido a...*</label>
+      <select class="custom-select" formControlName='opcion' placeholder="Opciones"
+      [ngClass]="{
+        'is-invalid' : formulario.controls['opcion'].invalid && (formulario.controls['opcion'].dirty || formulario.controls['opcion'].touched),
+        'is-valid' : formulario.controls['opcion'].valid && (formulario.controls['opcion'].dirty || formulario.controls['opcion'].touched)
+      }">
+        <option selected value="0" class="text-muted">Opciones...</option>
+        <option class="text-dark" *ngFor="let dirigido of opciones">
+          {{dirigido}}
+        </option>
+      </select>
+      <div class='alert alert-danger mt-3' *ngIf="formulario.controls['opcion'].hasError('pattern')">"Opciones..." no es una opcion valida.</div>
+    </li>
+
+    <li>
+      <label class="form-label">Mensaje*</label>
+      <textarea class="form-control" formControlName="mensaje" placeholder="Su mensaje"
+      [ngClass]="{
+        'is-invalid' : formulario.controls['mensaje'].invalid && (formulario.controls['mensaje'].dirty || formulario.controls['mensaje'].touched),
+        'is-valid' : formulario.controls['mensaje'].valid && (formulario.controls['mensaje'].dirty || formulario.controls['mensaje'].touched)
+      }"></textarea>
+      <div class='alert alert-danger mt-3' *ngIf="formulario.controls['mensaje'].invalid && (formulario.controls['mensaje'].dirty || formulario.controls['mensaje'].touched)">Es obligatorio dejar un mensaje.</div>
+    </li>
+
+    <li>
+      <button type="submit" class="btn btn-success" [disabled]="!formulario.valid">Enviar</button>
+    </li>
+  </ul>
+</form>
+</div>
+
+<div class="d-flex flex-wrap justify-content-center alert alert-success mt-5" *ngIf="estado">Hemos recibido su formulario de forma exitosa.</div>

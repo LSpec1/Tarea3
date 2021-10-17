@@ -11,7 +11,9 @@ import { ContactScreenComponent } from './screens/contact-screen/contact-screen.
 import { NewsScreenComponent } from './screens/news-screen/news-screen.component';
 
 import { MatTabsModule } from '@angular/material/tabs';
+import { ReactiveFormsModule } from '@angular/forms';
 import { CartaNoticiasComponent } from './components/carta-noticias/carta-noticias.component';
+
 
 @NgModule({
   declarations: [
@@ -20,14 +22,16 @@ import { CartaNoticiasComponent } from './components/carta-noticias/carta-notici
     HomeScreenComponent,
     ContactScreenComponent,
     NewsScreenComponent,
-    CartaNoticiasComponent
+    CartaNoticiasComponent,
+
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     NgbModule,
     BrowserAnimationsModule,
-    MatTabsModule
+    MatTabsModule,
+    ReactiveFormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
