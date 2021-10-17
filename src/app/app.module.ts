@@ -11,6 +11,7 @@ import { ContactScreenComponent } from './screens/contact-screen/contact-screen.
 import { NewsScreenComponent } from './screens/news-screen/news-screen.component';
 
 import { MatTabsModule } from '@angular/material/tabs';
+import { CartaNoticiasComponent } from './components/carta-noticias/carta-noticias.component';
 
 @NgModule({
   declarations: [
@@ -18,7 +19,8 @@ import { MatTabsModule } from '@angular/material/tabs';
     NavbarComponent,
     HomeScreenComponent,
     ContactScreenComponent,
-    NewsScreenComponent
+    NewsScreenComponent,
+    CartaNoticiasComponent
   ],
   imports: [
     BrowserModule,
