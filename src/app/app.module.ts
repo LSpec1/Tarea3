@@ -12,7 +12,7 @@ import { NewsScreenComponent } from './screens/news-screen/news-screen.component
 
 import { MatTabsModule } from '@angular/material/tabs';
 import { ReactiveFormsModule } from '@angular/forms';
-
+import { CartaNoticiasComponent } from './components/carta-noticias/carta-noticias.component';
 
 
 @NgModule({
@@ -22,6 +22,7 @@ import { ReactiveFormsModule } from '@angular/forms';
     HomeScreenComponent,
     ContactScreenComponent,
     NewsScreenComponent,
+    CartaNoticiasComponent,
 
   ],
   imports: [
