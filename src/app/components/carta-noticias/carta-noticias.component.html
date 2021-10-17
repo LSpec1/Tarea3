@@ -7,21 +7,25 @@
   <div class="card bg-light border-light" style="max-width: min-content;">
     <img width="345" height="200" src="{{news.url}}" alt="">
     <div class="card-body">
-      <h2 class="card-tittle">{{news.titulo}}</h2>
-      <p>{{news.cuerpo}}</p>
       <div *ngIf="news.id == 1">
-        <div class="text-center">
-          <a href="#" class="btn text-white bg-success">{{news.boton}}</a>
+        <h2 class="card-tittle text-{{verde}}">{{news.titulo}}</h2>
+        <p>{{news.cuerpo}}</p>
+        <div class="text-center mt-4">
+          <a href="#" class="btn text-{{blanco}} bg-{{verde}}">{{news.boton}}</a>
         </div>
       </div>
       <div *ngIf="news.id == 2">
-        <div class="text-center">
-          <a href="#" class="btn btn-primary">{{news.boton}}</a>
+        <h2 class="card-tittle text-{{azul}}">{{news.titulo}}</h2>
+        <p>{{news.cuerpo}}</p>
+        <div class="text-center mt-4">
+          <a href="#" class="btn text-{{blanco}} bg-{{azul}}">{{news.boton}}</a>
         </div>
       </div>
       <div *ngIf="news.id == 3">
-        <div class="text-center">
-          <a href="#" class="btn text-white bg-danger">{{news.boton}}</a>
+        <h2 class="card-tittle" style="color:gray">{{news.titulo}}</h2>
+        <p>{{news.cuerpo}}</p>
+        <div class="text-center mt-4">
+          <a href="#" class="btn text-{{blanco}} bg-{{rojo}}">{{news.boton}}</a>
         </div>
       </div>
     </div>
@@ -31,12 +35,12 @@
 <!--noticias pequeñas-->
 <ng-template #noticias2>
   <div class="card bg-light border-light" style="max-width: min-content;">
-    <img width="200" height="200" src="{{news.url}}" alt="">
+    <img width="250" height="250" src="{{news.url}}" alt="">
     <div class="card-body">
-      <h2 class="card-tittle">{{news.titulo}}</h2>
+      <h2 class="card-tittle text-center" style="color:gray">{{news.titulo}}</h2>
       <p>{{news.cuerpo}}</p>
-      <div class="text-center">
-        <a href="#" class="btn text-dark bg-light border-dark">{{news.boton}}</a>
+      <div class="text-center mt-4">
+        <a href="#" class="btn text-dark bg-light" style="border: 3px solid gray">{{news.boton}}</a>
       </div>
     </div>
   </div>

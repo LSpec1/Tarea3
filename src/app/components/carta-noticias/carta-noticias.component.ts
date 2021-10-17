@@ -8,6 +8,12 @@ import { Noticia } from 'src/app/components/models/noticia.model';
 })
 export class CartaNoticiasComponent implements OnInit {
 
+  gris:string = "gray";
+  blanco:string = "white";
+  verde:string = "success";
+  azul:string = "primary";
+  rojo:string = "rojodark";
+
   @Input()
   news: Noticia;
 
