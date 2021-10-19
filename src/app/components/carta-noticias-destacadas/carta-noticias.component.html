@@ -4,7 +4,7 @@
   <div class="card-body">
     <div *ngIf="news.categoria == 'Entretenimiento'">
       <h2 class="card-tittle text-{{verde}}">{{news.titulo}}</h2>
-      <p>{{news.cuerpo}}</p>
+      <p>{{news.cuerpoCarta}}</p>
       <div class="text-center mt-4">
         <button class="btn btn-outline-primary mb-2 mr-2 text-{{blanco}} bg-{{verde}}" (click)="openScrollableContent(longContent)">
           {{news.boton}}
@@ -13,7 +13,7 @@
     </div>
     <div *ngIf="news.categoria == 'Mundo'">
       <h2 class="card-tittle text-{{azul}}">{{news.titulo}}</h2>
-      <p>{{news.cuerpo}}</p>
+      <p>{{news.cuerpoCarta}}</p>
       <div class="text-center mt-4">
         <button class="btn btn-outline-primary mb-2 mr-2 text-{{blanco}} bg-{{azul}}" (click)="openScrollableContent(longContent)">
           {{news.boton}}
@@ -22,7 +22,7 @@
     </div>
     <div *ngIf="news.categoria == 'Deportes'">
       <h2 class="card-tittle" style="color:gray">{{news.titulo}}</h2>
-      <p>{{news.cuerpo}}</p>
+      <p>{{news.cuerpoCarta}}</p>
       <div class="text-center mt-4">
         <button class="btn btn-outline-primary mb-2 mr-2 text-{{blanco}} bg-{{rojoDark}}" (click)="openScrollableContent(longContent)">
           {{news.boton}}
@@ -31,7 +31,7 @@
     </div>
     <div *ngIf="news.categoria == 'Economia'">
       <h2 class="card-tittle text-{{violeta}}">{{news.titulo}}</h2>
-      <p>{{news.cuerpo}}</p>
+      <p>{{news.cuerpoCarta}}</p>
       <div class="text-center mt-4">
         <button class="btn btn-outline-primary mb-2 mr-2 text-{{blanco}} bg-{{violeta}" (click)="openScrollableContent(longContent)">
           {{news.boton}}
@@ -40,7 +40,7 @@
     </div>
     <div *ngIf="news.categoria == 'Salud'">
       <h2 class="card-tittle text-{{azulDark}}">{{news.titulo}}</h2>
-      <p>{{news.cuerpo}}</p>
+      <p>{{news.cuerpoCarta}}</p>
       <div class="text-center mt-4">
         <button class="btn btn-outline-primary mb-2 mr-2 text-{{blanco}} bg-{{azulDark}}" (click)="openScrollableContent(longContent)">
           {{news.boton}}
@@ -49,7 +49,7 @@
     </div>
     <div *ngIf="news.categoria == 'Tecnologia'">
       <h2 class="card-tittle text-{{rojo}}">{{news.titulo}}</h2>
-      <p>{{news.cuerpo}}</p>
+      <p>{{news.cuerpoCarta}}</p>
       <div class="text-center mt-4">
         <button class="btn btn-outline-primary mb-2 mr-2 text-{{blanco}} bg-{{rojo}}" (click)="openScrollableContent(longContent)">
           {{news.boton}}
@@ -61,14 +61,22 @@
 
 <!--Modal diseño-->
 <ng-template #longContent let-modal>
+  <!--header-->
   <div class="modal-header">
-    <h4 class="modal-title">{{news.titulo}}</h4>
+    <h4 class="modal-title titulo-modal" style="font-size: 20px;">{{news.titulo}}</h4>
     <button type="button" class="close" aria-label="Close" (click)="modal.dismiss('Cross click')">
       <span aria-hidden="true">&times;</span>
     </button>
   </div>
+  <ul id="info">
+    <li>Autor: {{news.autor}}</li>
+    <li>Fecha: {{news.fecha}}</li>
+    <li>Categoria: {{news.categoria}}</li>
+  </ul>
+  <img width="max-width" height="max-height" src="{{news.url}}" alt="">
+  <!--cuerpo-->
   <div class="modal-body">
-    {{news.cuerpo}}
+    {{news.cuerpoTotal}}
   </div>
   <div class="modal-footer">
     <button type="button" class="btn btn-light" (click)="modal.close('Close click')">Close</button>

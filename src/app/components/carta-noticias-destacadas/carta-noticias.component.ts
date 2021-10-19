@@ -43,7 +43,8 @@ export class CartaNoticiasDestacadasComponent implements OnInit {
         categoria: '',
         fecha: '',
         autor: '',
-        cuerpo:'',
+        cuerpoCarta:'',
+        cuerpoTotal:'',
         boton:''
       };
   }

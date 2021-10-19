@@ -3,7 +3,7 @@
     <img width="250" height="250" src="{{news.url}}" alt="">
     <div class="card-body">
     <h2 class="card-tittle text-center" style="color:gray">{{news.titulo}}</h2>
-    <p>{{news.cuerpo}}</p>
+    <p>{{news.cuerpoCarta}}</p>
         <div class="text-center mt-4">
             <button class="btn btn-outline-primary mb-2 mr-2 text-dark bg-light" style="border: 3px solid gray" (click)="openScrollableContent(longContent)">
                 {{news.boton}}
@@ -12,18 +12,26 @@
     </div>
 </div>
 
-<!--modal diseño-->
+<!--Modal diseño-->
 <ng-template #longContent let-modal>
-    <div class="modal-header">
-      <h4 class="modal-title">{{news.titulo}}</h4>
-      <button type="button" class="close" aria-label="Close" (click)="modal.dismiss('Cross click')">
-        <span aria-hidden="true">&times;</span>
-      </button>
-    </div>
-    <div class="modal-body">
-      {{news.cuerpo}}
-    </div>
-    <div class="modal-footer">
-      <button type="button" class="btn btn-light" (click)="modal.close('Close click')">Close</button>
-    </div>
-  </ng-template>
+  <!--header-->
+  <div class="modal-header">
+    <h4 class="modal-title titulo-modal" style="font-size: 20px;">{{news.titulo}}</h4>
+    <button type="button" class="close" aria-label="Close" (click)="modal.dismiss('Cross click')">
+      <span aria-hidden="true">&times;</span>
+    </button>
+  </div>
+  <ul id="info">
+    <li>Autor: {{news.autor}}</li>
+    <li>Fecha: {{news.fecha}}</li>
+    <li>Categoria: {{news.categoria}}</li>
+  </ul>
+  <img width="max-width" height="max-height" src="{{news.url}}" alt="">
+  <!--cuerpo-->
+  <div class="modal-body">
+    {{news.cuerpoTotal}}
+  </div>
+  <div class="modal-footer">
+    <button type="button" class="btn btn-light" (click)="modal.close('Close click')">Close</button>
+  </div>
+</ng-template>

@@ -37,7 +37,8 @@ export class CartaNoticiasOtroComponent implements OnInit {
         categoria: '',
         fecha: '',
         autor: '',
-        cuerpo:'',
+        cuerpoCarta:'',
+        cuerpoTotal:'',
         boton:''
       };
   }

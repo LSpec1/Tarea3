@@ -5,6 +5,7 @@ export interface Noticia {
     fecha: string;
     autor: string;
     titulo: string;
-    cuerpo: string;
+    cuerpoCarta: string;
+    cuerpoTotal: string;
     boton: string;
 }
