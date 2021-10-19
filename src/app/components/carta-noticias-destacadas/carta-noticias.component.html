@@ -24,6 +24,33 @@
       <h2 class="card-tittle" style="color:gray">{{news.titulo}}</h2>
       <p>{{news.cuerpo}}</p>
       <div class="text-center mt-4">
+        <button href="#" class="btn text-{{blanco}} bg-{{rojoDark}}" data-toggle="modal" data-target="#contenido-modal">
+          {{news.boton}}
+        </button>
+      </div>
+    </div>
+    <div *ngIf="news.categoria == 'Economia'">
+      <h2 class="card-tittle text-{{violeta}}">{{news.titulo}}</h2>
+      <p>{{news.cuerpo}}</p>
+      <div class="text-center mt-4">
+        <button href="#" class="btn text-{{blanco}} bg-{{violeta}}" data-toggle="modal" data-target="#contenido-modal">
+          {{news.boton}}
+        </button>
+      </div>
+    </div>
+    <div *ngIf="news.categoria == 'Salud'">
+      <h2 class="card-tittle text-{{azulDark}}">{{news.titulo}}</h2>
+      <p>{{news.cuerpo}}</p>
+      <div class="text-center mt-4">
+        <button href="#" class="btn text-{{blanco}} bg-{{azulDark}}" data-toggle="modal" data-target="#contenido-modal">
+          {{news.boton}}
+        </button>
+      </div>
+    </div>
+    <div *ngIf="news.categoria == 'Tecnologia'">
+      <h2 class="card-tittle text-{{rojo}}">{{news.titulo}}</h2>
+      <p>{{news.cuerpo}}</p>
+      <div class="text-center mt-4">
         <button href="#" class="btn text-{{blanco}} bg-{{rojo}}" data-toggle="modal" data-target="#contenido-modal">
           {{news.boton}}
         </button>

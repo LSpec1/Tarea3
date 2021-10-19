@@ -12,7 +12,10 @@ export class CartaNoticiasDestacadasComponent implements OnInit {
   blanco:string = "white";
   verde:string = "success";
   azul:string = "primary";
-  rojo:string = "rojodark";
+  rojoDark:string = "rojodark";
+  violeta:string = "violet";
+  azulDark:string ="azuldark";
+  rojo:string = "red"
 
   @Input()
   news: Noticia;

@@ -10,9 +10,6 @@ export class CartaNoticiasOtroComponent implements OnInit {
 
   gris:string = "gray";
   blanco:string = "white";
-  verde:string = "success";
-  azul:string = "primary";
-  rojo:string = "rojodark";
 
   @Input()
   news: Noticia;
