@@ -8,10 +8,12 @@ import { Noticia } from 'src/app/components/models/noticia.model';
 })
 export class HomeScreenComponent implements OnInit {
 
+  URLfotoPortada = 'https://ayudaenaccion.org/ong/wp-content/uploads/2021/02/Cabecera-para-qué-sirven-los-bosques.jpg';
   public noticias_destacadas: Noticia[];
   public noticias_otro: Noticia[];
 
-  constructor() { 
+  constructor() {
+    
     let botonNoticia = 'Leer Más';
     this.noticias_destacadas = [
       {
