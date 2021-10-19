@@ -6,7 +6,7 @@
       <h2 class="card-tittle text-{{verde}}">{{news.titulo}}</h2>
       <p>{{news.cuerpo}}</p>
       <div class="text-center mt-4">
-        <button class="btn text-{{blanco}} bg-{{verde}}" data-toggle="modal" data-target="#contenido-modal">
+        <button class="btn btn-outline-primary mb-2 mr-2 text-{{blanco}} bg-{{verde}}" (click)="openScrollableContent(longContent)">
           {{news.boton}}
         </button>
       </div>
@@ -15,7 +15,7 @@
       <h2 class="card-tittle text-{{azul}}">{{news.titulo}}</h2>
       <p>{{news.cuerpo}}</p>
       <div class="text-center mt-4">
-        <button href="#" class="btn text-{{blanco}} bg-{{azul}}" data-toggle="modal" data-target="#contenido-modal">
+        <button class="btn btn-outline-primary mb-2 mr-2 text-{{blanco}} bg-{{azul}}" (click)="openScrollableContent(longContent)">
           {{news.boton}}
         </button>
       </div>
@@ -24,7 +24,7 @@
       <h2 class="card-tittle" style="color:gray">{{news.titulo}}</h2>
       <p>{{news.cuerpo}}</p>
       <div class="text-center mt-4">
-        <button href="#" class="btn text-{{blanco}} bg-{{rojoDark}}" data-toggle="modal" data-target="#contenido-modal">
+        <button class="btn btn-outline-primary mb-2 mr-2 text-{{blanco}} bg-{{rojoDark}}" (click)="openScrollableContent(longContent)">
           {{news.boton}}
         </button>
       </div>
@@ -33,7 +33,7 @@
       <h2 class="card-tittle text-{{violeta}}">{{news.titulo}}</h2>
       <p>{{news.cuerpo}}</p>
       <div class="text-center mt-4">
-        <button href="#" class="btn text-{{blanco}} bg-{{violeta}}" data-toggle="modal" data-target="#contenido-modal">
+        <button class="btn btn-outline-primary mb-2 mr-2 text-{{blanco}} bg-{{violeta}" (click)="openScrollableContent(longContent)">
           {{news.boton}}
         </button>
       </div>
@@ -42,7 +42,7 @@
       <h2 class="card-tittle text-{{azulDark}}">{{news.titulo}}</h2>
       <p>{{news.cuerpo}}</p>
       <div class="text-center mt-4">
-        <button href="#" class="btn text-{{blanco}} bg-{{azulDark}}" data-toggle="modal" data-target="#contenido-modal">
+        <button class="btn btn-outline-primary mb-2 mr-2 text-{{blanco}} bg-{{azulDark}}" (click)="openScrollableContent(longContent)">
           {{news.boton}}
         </button>
       </div>
@@ -51,10 +51,26 @@
       <h2 class="card-tittle text-{{rojo}}">{{news.titulo}}</h2>
       <p>{{news.cuerpo}}</p>
       <div class="text-center mt-4">
-        <button href="#" class="btn text-{{blanco}} bg-{{rojo}}" data-toggle="modal" data-target="#contenido-modal">
+        <button class="btn btn-outline-primary mb-2 mr-2 text-{{blanco}} bg-{{rojo}}" (click)="openScrollableContent(longContent)">
           {{news.boton}}
         </button>
       </div>
     </div>
   </div>
 </div>
+
+<!--Modal diseño-->
+<ng-template #longContent let-modal>
+  <div class="modal-header">
+    <h4 class="modal-title">{{news.titulo}}</h4>
+    <button type="button" class="close" aria-label="Close" (click)="modal.dismiss('Cross click')">
+      <span aria-hidden="true">&times;</span>
+    </button>
+  </div>
+  <div class="modal-body">
+    {{news.cuerpo}}
+  </div>
+  <div class="modal-footer">
+    <button type="button" class="btn btn-light" (click)="modal.close('Close click')">Close</button>
+  </div>
+</ng-template>

@@ -8,6 +8,7 @@ import { Noticia } from 'src/app/components/models/noticia.model';
 })
 
 export class HomeScreenComponent implements OnInit {
+  closeResult = '';
   public URLfotoPortada = 'https://ayudaenaccion.org/ong/wp-content/uploads/2021/02/Cabecera-para-qué-sirven-los-bosques.jpg';
   public noticias_destacadas: Noticia[];
   public noticias_otro: Noticia[];
@@ -93,11 +94,4 @@ export class HomeScreenComponent implements OnInit {
 
   ngOnInit(): void {
   }
-
-}
-
-//Esta funcion será utilizada para crear el modulo emergente de la noticia
-export function obtenerNoticia(noticia:Noticia): Noticia {
-  
-  return noticia;
 }

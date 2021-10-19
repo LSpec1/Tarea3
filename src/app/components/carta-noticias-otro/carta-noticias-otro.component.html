@@ -4,8 +4,26 @@
     <div class="card-body">
     <h2 class="card-tittle text-center" style="color:gray">{{news.titulo}}</h2>
     <p>{{news.cuerpo}}</p>
-    <div class="text-center mt-4">
-        <a href="#" class="btn text-dark bg-light" style="border: 3px solid gray">{{news.boton}}</a>
-    </div>
+        <div class="text-center mt-4">
+            <button class="btn btn-outline-primary mb-2 mr-2 text-dark bg-light" style="border: 3px solid gray" (click)="openScrollableContent(longContent)">
+                {{news.boton}}
+            </button>
+        </div>
     </div>
 </div>
+
+<!--modal diseño-->
+<ng-template #longContent let-modal>
+    <div class="modal-header">
+      <h4 class="modal-title">{{news.titulo}}</h4>
+      <button type="button" class="close" aria-label="Close" (click)="modal.dismiss('Cross click')">
+        <span aria-hidden="true">&times;</span>
+      </button>
+    </div>
+    <div class="modal-body">
+      {{news.cuerpo}}
+    </div>
+    <div class="modal-footer">
+      <button type="button" class="btn btn-light" (click)="modal.close('Close click')">Close</button>
+    </div>
+  </ng-template>
