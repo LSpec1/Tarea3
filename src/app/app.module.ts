@@ -15,6 +15,7 @@ import { ReactiveFormsModule } from '@angular/forms';
 import { CartaNoticiasDestacadasComponent } from './components/carta-noticias-destacadas/carta-noticias.component';
 import { CartaNoticiasOtroComponent } from './components/carta-noticias-otro/carta-noticias-otro.component';
 import { FooterComponent } from './components/footer/footer.component';
+import { ModalNoticiaComponent } from './components/modal-noticia/modal-noticia.component';
 
 
 @NgModule({
@@ -26,7 +27,8 @@ import { FooterComponent } from './components/footer/footer.component';
     NewsScreenComponent,
     CartaNoticiasDestacadasComponent,
     CartaNoticiasOtroComponent,
-    FooterComponent
+    FooterComponent,
+    ModalNoticiaComponent
   ],
   imports: [
     BrowserModule,

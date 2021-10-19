@@ -23,6 +23,9 @@ export class CartaNoticiasDestacadasComponent implements OnInit {
         id:0,
         url:'',
         titulo:'',
+        categoria: '',
+        fecha: '',
+        autor: '',
         cuerpo:'',
         boton:''
       };
