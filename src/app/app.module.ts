@@ -12,9 +12,11 @@ import { NewsScreenComponent } from './screens/news-screen/news-screen.component
 
 import { MatTabsModule } from '@angular/material/tabs';
 import { ReactiveFormsModule } from '@angular/forms';
+
 import { CartaNoticiasDestacadasComponent } from './components/carta-noticias-destacadas/carta-noticias.component';
 import { CartaNoticiasOtroComponent } from './components/carta-noticias-otro/carta-noticias-otro.component';
 import { FooterComponent } from './components/footer/footer.component';
+
 
 
 @NgModule({

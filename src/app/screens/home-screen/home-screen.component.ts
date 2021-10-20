@@ -13,6 +13,7 @@ export class HomeScreenComponent implements OnInit {
   public noticias_destacadas: Noticia[];
   public noticias_otro: Noticia[];
 
+
   constructor() {
     
     let botonNoticia = 'Leer Más';
