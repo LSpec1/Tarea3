@@ -38,7 +38,7 @@ export class ContactScreenComponent implements OnInit {
       'mensaje': this.formulario.get("mensaje")?.value
     }];
 
-    console.log(datos[0]);
+
 
   }
 }
