@@ -10,9 +10,14 @@ import { HomeScreenComponent } from './screens/home-screen/home-screen.component
 import { ContactScreenComponent } from './screens/contact-screen/contact-screen.component';
 import { NewsScreenComponent } from './screens/news-screen/news-screen.component';
 
-import { MatTabsModule } from '@angular/material/tabs';
+//import { MatTabsModule } from '@angular/material/tabs';
 import { ReactiveFormsModule } from '@angular/forms';
-import { CartaNoticiasComponent } from './components/carta-noticias/carta-noticias.component';
+
+import { CartaNoticiasDestacadasComponent } from './components/carta-noticias-destacadas/carta-noticias.component';
+import { CartaNoticiasOtroComponent } from './components/carta-noticias-otro/carta-noticias-otro.component';
+import { FooterComponent } from './components/footer/footer.component';
+import { DetalleNoticiaComponent } from './components/detalle-noticia/detalle-noticia.component';
+
 
 
 @NgModule({
@@ -22,15 +27,17 @@ import { CartaNoticiasComponent } from './components/carta-noticias/carta-notici
     HomeScreenComponent,
     ContactScreenComponent,
     NewsScreenComponent,
-    CartaNoticiasComponent,
-
+    CartaNoticiasDestacadasComponent,
+    CartaNoticiasOtroComponent,
+    FooterComponent,
+    DetalleNoticiaComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     NgbModule,
     BrowserAnimationsModule,
-    MatTabsModule,
+    //MatTabsModule,
     ReactiveFormsModule
   ],
   providers: [],

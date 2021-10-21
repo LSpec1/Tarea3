@@ -1,0 +1,9 @@
+{
+    "version": 3,
+    "mappings": "",
+    "sources": [
+        "../src/app/screens/news-screen/news-screen.component.scss"
+    ],
+    "names": [],
+    "file": "news-screen.component.css"
+}

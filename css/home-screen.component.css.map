@@ -1,0 +1,9 @@
+{
+    "version": 3,
+    "mappings": "",
+    "sources": [
+        "../src/app/screens/home-screen/home-screen.component.scss"
+    ],
+    "names": [],
+    "file": "home-screen.component.css"
+}

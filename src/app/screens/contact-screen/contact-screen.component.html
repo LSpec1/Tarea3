@@ -22,7 +22,7 @@
         'is-valid' : formulario.controls['telefono'].valid && (formulario.controls['telefono'].dirty || formulario.controls['telefono'].touched)
       }">
       <div class='alert alert-danger mt-3' *ngIf="formulario.controls['telefono'].invalid && (formulario.controls['telefono'].dirty || formulario.controls['telefono'].touched)">
-        <div *ngIf="formulario.controls['telefono'].hasError('pattern')">Debe anteponer un 9 antes de los 8 digitos de su telefono</div>
+        <div *ngIf="formulario.controls['telefono'].hasError('pattern')">Es necesario anteponer el 9 antes de los 8 digitos</div>
         <div *ngIf="formulario.controls['telefono'].hasError('required')">Es obligatorio ingresar su telefono</div>
       </div>
     </li>
@@ -36,7 +36,7 @@
       }">
       <div class='alert alert-danger mt-3' *ngIf="formulario.controls['correo'].invalid && (formulario.controls['correo'].dirty || formulario.controls['correo'].touched)">
         <div *ngIf="formulario.controls['correo'].hasError('email')">Debe ingresar un correo valido.</div>
-        <div *ngIf="formulario.controls['correo'].hasError('required')">Es obligatorio ingresar su correo</div>
+        <div *ngIf="formulario.controls['correo'].hasError('required')">Es ob/ligatorio ingresar su correo</div>
       </div>
     </li>
 
